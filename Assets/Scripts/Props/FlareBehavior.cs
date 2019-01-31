@@ -16,7 +16,7 @@ public class FlareBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(TouchedWallPos);
+        //Debug.Log(TouchedWallPos);
 
         if (touchWall & !isLit)
         {

@@ -1,11 +1,10 @@
 {
   "app_key": "application.generated.unity.steamvr.exe",
-  "controller_type": "knuckles",
-  "description": "",
-  "name": "knuckles_default",
   "bindings": {
     "/actions/buggy": {
       "chords": [],
+      "poses": [],
+      "haptics": [],
       "sources": [
         {
           "path": "/user/hand/left/input/thumbstick",
@@ -88,12 +87,30 @@
           }
         }
       ],
-      "poses": [],
-      "haptics": [],
       "skeleton": []
     },
     "/actions/default": {
       "chords": [],
+      "poses": [
+        {
+          "output": "/actions/default/in/pose",
+          "path": "/user/hand/left/pose/raw"
+        },
+        {
+          "output": "/actions/default/in/pose",
+          "path": "/user/hand/right/pose/raw"
+        }
+      ],
+      "haptics": [
+        {
+          "output": "/actions/default/out/haptic",
+          "path": "/user/hand/left/output/haptic"
+        },
+        {
+          "output": "/actions/default/out/haptic",
+          "path": "/user/hand/right/output/haptic"
+        }
+      ],
       "sources": [
         {
           "path": "/user/hand/left/input/trigger",
@@ -101,27 +118,7 @@
           "parameters": {},
           "inputs": {
             "click": {
-              "output": "/actions/default/in/use"
-            }
-          }
-        },
-        {
-          "path": "/user/hand/left/input/trigger",
-          "mode": "button",
-          "parameters": {},
-          "inputs": {
-            "click": {
               "output": "/actions/default/in/interactui"
-            }
-          }
-        },
-        {
-          "path": "/user/hand/left/input/trackpad",
-          "mode": "trackpad",
-          "parameters": {},
-          "inputs": {
-            "position": {
-              "output": "/actions/default/in/move"
             }
           }
         },
@@ -161,27 +158,7 @@
           "parameters": {},
           "inputs": {
             "click": {
-              "output": "/actions/default/in/use"
-            }
-          }
-        },
-        {
-          "path": "/user/hand/right/input/trigger",
-          "mode": "button",
-          "parameters": {},
-          "inputs": {
-            "click": {
               "output": "/actions/default/in/interactui"
-            }
-          }
-        },
-        {
-          "path": "/user/hand/right/input/trackpad",
-          "mode": "trackpad",
-          "parameters": {},
-          "inputs": {
-            "position": {
-              "output": "/actions/default/in/move"
             }
           }
         },
@@ -248,26 +225,6 @@
           }
         }
       ],
-      "poses": [
-        {
-          "output": "/actions/default/in/pose",
-          "path": "/user/hand/left/pose/raw"
-        },
-        {
-          "output": "/actions/default/in/pose",
-          "path": "/user/hand/right/pose/raw"
-        }
-      ],
-      "haptics": [
-        {
-          "output": "/actions/default/out/haptic",
-          "path": "/user/hand/left/output/haptic"
-        },
-        {
-          "output": "/actions/default/out/haptic",
-          "path": "/user/hand/right/output/haptic"
-        }
-      ],
       "skeleton": [
         {
           "output": "/actions/default/in/skeletonlefthand",
@@ -281,6 +238,8 @@
     },
     "/actions/platformer": {
       "chords": [],
+      "poses": [],
+      "haptics": [],
       "sources": [
         {
           "path": "/user/hand/left/input/thumbstick",
@@ -323,9 +282,10 @@
           }
         }
       ],
-      "poses": [],
-      "haptics": [],
       "skeleton": []
     }
-  }
+  },
+  "controller_type": "knuckles",
+  "description": "",
+  "name": "knuckles_default"
 }

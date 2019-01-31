@@ -36,8 +36,12 @@
       "requirement": "optional"
     },
     {
-      "name": "/actions/default/in/Touchpad",
+      "name": "/actions/default/in/touchpad",
       "type": "vector2"
+    },
+    {
+      "name": "/actions/default/in/touchpadPressed",
+      "type": "boolean"
     },
     {
       "name": "/actions/default/out/Haptic",
@@ -374,10 +378,6 @@
       "/actions/default/in/SkeletonRightHand": "Skeleton (Right)",
       "/actions/default/in/Pose": "Pose",
       "/actions/default/out/Haptic": "Haptic",
-      "/actions/buggybuddy/in/Steering": "Steering",
-      "/actions/buggybuddy/in/Throttle": "Throttle",
-      "/actions/buggybuddy/in/Brake": "Brake",
-      "/actions/buggybuddy/in/Reset": "Reset",
       "/actions/platformer/in/Move": "Move",
       "/actions/platformer/in/Jump": "Jump",
       "/actions/htc_viu/in/viu_press_00": "Press00 (System)",
