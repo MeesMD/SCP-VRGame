@@ -44,7 +44,7 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       intensity: 1.55
-      radius: 2.04
+      radius: 6.3
       sampleCount: 16
       downsampling: 1
       forceForwardCompatibility: 1
@@ -78,7 +78,7 @@ MonoBehaviour:
       useCameraFov: 1
       kernelSize: 3
   motionBlur:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       shutterAngle: 175
       sampleCount: 8
@@ -104,13 +104,13 @@ MonoBehaviour:
         intensity: 1.08
         threshold: 1
         softKnee: 0.269
-        radius: 2.48
+        radius: 7
         antiFlicker: 1
       lensDirt:
-        texture: {fileID: 2800000, guid: 7a051dbda2d7bc447bee412427cd311e, type: 3}
-        intensity: 2.38
+        texture: {fileID: 2800000, guid: 60ff32bf4245c304fbd096a0a49dcbdd, type: 3}
+        intensity: 5.17
   colorGrading:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       tonemapping:
         tonemapper: 1
@@ -126,9 +126,9 @@ MonoBehaviour:
         tint: 4
         hueShift: 3
         saturation: 1.2
-        contrast: 0.97
+        contrast: 0.83
       channelMixer:
-        red: {x: 1, y: 0, z: 0}
+        red: {x: 1, y: -0.17, z: 0}
         green: {x: 0, y: 1, z: 0}
         blue: {x: 0, y: 0, z: 1}
         currentEditingChannel: 0
