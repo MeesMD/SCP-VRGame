@@ -9,7 +9,7 @@ public class InputHandler : MonoBehaviour
     [SerializeField] private SteamVR_Action_Boolean touchpadPressL;
     [SerializeField] private SteamVR_Action_Boolean touchpadPressR;
 
-    [SerializeField] private GameObject controllerL;
+    [SerializeField] private GameObject controller;
     [SerializeField] private GameObject player;
 
     private Vector2 touchpadValueL;
@@ -34,9 +34,11 @@ public class InputHandler : MonoBehaviour
         touchpadPressedL = touchpadPressL.GetState(SteamVR_Input_Sources.LeftHand);
 
         touchpadValueR = touchpad.GetAxis(SteamVR_Input_Sources.RightHand);
-        touchpadPressedR = touchpadPressR.GetState(SteamVR_Input_Sources.RightHand);
+        touchpadPressedR = touchpadPressR.GetStateUp(SteamVR_Input_Sources.RightHand);
 
-        
+        CheckMove();
+        Rotate();
+
     }
 
     private void Rotate()
@@ -52,10 +54,12 @@ public class InputHandler : MonoBehaviour
         if (touchpadValueR.x > tpDir && touchpadPressedR)
         {
             //Right
+            player.transform.Rotate(0, 90, 0);
         }
         else if (touchpadValueR.x < -tpDir && touchpadPressedR)
         {
             //Left
+            player.transform.Rotate(0, 270, 0);
         }
     }
 
@@ -65,7 +69,8 @@ public class InputHandler : MonoBehaviour
         {
             Walk();
         }
-        else if (touchpadValueL.y > tpDir && touchpadPressedL == true)
+
+        if (touchpadValueL.y > tpDir && touchpadPressedL == true)
         {
             Run();
         }
@@ -79,14 +84,14 @@ public class InputHandler : MonoBehaviour
     private void Walk()
     {
         Debug.Log("Walk");
-        player.GetComponent<Rigidbody>().velocity = controllerL.transform.forward * walkVelocity;
+        player.GetComponent<Rigidbody>().velocity = controller.transform.forward * walkVelocity;
         return;
     }
 
     private void Run()
     {
         Debug.Log("Run");
-        player.GetComponent<Rigidbody>().velocity = controllerL.transform.forward * runVelocity;
+        player.GetComponent<Rigidbody>().velocity = controller.transform.forward * runVelocity;
         return;
     }
 
