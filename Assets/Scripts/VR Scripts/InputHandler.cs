@@ -11,22 +11,18 @@ public class InputHandler : MonoBehaviour
 
     [SerializeField] private GameObject controller;
     [SerializeField] private GameObject player;
+    [SerializeField] private Rigidbody pRB;
 
     private Vector2 touchpadValueL;
     private bool touchpadPressedL = false;
-    private float walkVelocity = 1;
-    private float runVelocity = 2.3f;
+    private float walkVelocity = 70f;
+    private float runVelocity = 130f;
 
     private Vector2 touchpadValueR;
     private Quaternion currentRotation;
     private bool touchpadPressedR = false;
     private float tpDir = 0.7f;
-
-
-    private void Start()
-    {
-
-    }
+    
 
     private void Update()
     {
@@ -44,22 +40,20 @@ public class InputHandler : MonoBehaviour
     private void Rotate()
     {
         currentRotation = player.transform.rotation;
-        
-        if(touchpadValueR.y < -tpDir && touchpadPressedR)
-        {
-            //Down
-            player.transform.Rotate(0, 180, 0);
-        }
 
         if (touchpadValueR.x > tpDir && touchpadPressedR)
         {
             //Right
-            player.transform.Rotate(0, 90, 0);
+            var Euler = transform.rotation.eulerAngles;
+            Euler.y += 45;
+            player.transform.rotation = Quaternion.Euler(Euler);
         }
         else if (touchpadValueR.x < -tpDir && touchpadPressedR)
         {
             //Left
-            player.transform.Rotate(0, 270, 0);
+            var Euler = transform.rotation.eulerAngles;
+            Euler.y -= 45;
+            player.transform.rotation = Quaternion.Euler(Euler);
         }
     }
 
@@ -69,13 +63,13 @@ public class InputHandler : MonoBehaviour
         {
             Walk();
         }
-
-        if (touchpadValueL.y > tpDir && touchpadPressedL == true)
+        else if (touchpadValueL.y > tpDir && touchpadPressedL == true)
         {
             Run();
         }
         else
         {
+            pRB.velocity = Vector3.zero;
             touchpadPressedL = false;
             return;
         }
@@ -84,14 +78,14 @@ public class InputHandler : MonoBehaviour
     private void Walk()
     {
         Debug.Log("Walk");
-        player.GetComponent<Rigidbody>().velocity = controller.transform.forward * walkVelocity;
+        pRB.velocity = controller.transform.forward * walkVelocity * Time.deltaTime;
         return;
     }
 
     private void Run()
     {
         Debug.Log("Run");
-        player.GetComponent<Rigidbody>().velocity = controller.transform.forward * runVelocity;
+        pRB.velocity = controller.transform.forward * runVelocity * Time.deltaTime;
         return;
     }
 
