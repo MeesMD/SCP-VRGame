@@ -5,13 +5,21 @@ using UnityEngine;
 public class FlareBehavior : MonoBehaviour
 {
 
+    public GameObject flareLight;
+    public GameObject flareEffect;
+    private flareLight flarelightScript;
     private Vector3 TouchedWallPos;
-    [SerializeField]
-    private GameObject flareEffect;
     private bool isLit;
     private bool touchWall;
-    [SerializeField]
-    private float maxDist = 2;
+    private float maxDist = 1;
+
+
+    void Start()
+    {
+        flarelightScript = flareLight.GetComponent<flareLight>();
+        flareEffect.SetActive(false);
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -25,6 +33,8 @@ public class FlareBehavior : MonoBehaviour
             {
                 //ACTIVATE FLARE
                 Debug.Log("PFSFEFEHEHEFHEF");
+                flareEffect.SetActive(true);
+                StartCoroutine(flarelightScript.Flickering());
             }
         }
     }
@@ -32,13 +42,14 @@ public class FlareBehavior : MonoBehaviour
     void OnTriggerEnter(Collider col)
     {
         Debug.Log(col.name);
-        if(col.transform.tag == "Wall" && !isLit)
+        if (col.transform.tag == "Wall" && !isLit)
         {
             Debug.Log("Touched Wall");
             touchWall = true;
             TouchedWallPos = transform.position;
         }
     }
+
     private void OnTriggerExit(Collider col)
     {
         if (col.transform.tag == "Wall")

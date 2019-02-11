@@ -38,7 +38,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1000356285}
+<<<<<<< HEAD
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+=======
   m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+>>>>>>> 21cc83c3207b959f66a5fe66087ce60492341745
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -598,6 +602,13 @@ MonoBehaviour:
   normalMoveSpeed: 10
   slowMoveFactor: 0.25
   fastMoveFactor: 3
+<<<<<<< HEAD
+  rotationX: 0
+  rotationY: 0
+  isOrtho: 0
+  cam: {fileID: 0}
+=======
+>>>>>>> 21cc83c3207b959f66a5fe66087ce60492341745
 --- !u!114 &769419237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -618,9 +629,108 @@ MonoBehaviour:
   EnableAdvancedDeferredFog: 0
   FogDepthShift: 1
   FogEdgeBlending: 0.125
+<<<<<<< HEAD
+  WaterMeshes: []
+  WaterTransforms: []
+  WaterMaterials: []
+  WaterIsOnScreen: []
+  UnderWaterMask: {fileID: 0}
   m_aboveWatersurface: []
   m_belowWatersurface: []
   enableDebug: 1
+  mat: {fileID: 0}
+  blurMaterial: {fileID: 0}
+  blitMaterial: {fileID: 0}
+  cam: {fileID: 0}
+  UnderwaterIsSetUp: 0
+  camTransform: {fileID: 0}
+  frustumCornersArray:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  directions:
+  - {x: 0, y: 1, z: 0}
+  AmbientLightingSamples:
+  - r: 0
+    g: 0
+    b: 0
+    a: 0
+  DoUnderWaterRendering: 0
+  camProj:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  frustumCorners:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  UnderWaterMaskPID: 0
+  Lux_FrustumCornersWSPID: 0
+  Lux_CameraWSPID: 0
+  GerstnerEnabledPID: 0
+  LuxWaterMask_GerstnerVertexIntensityPID: 0
+  GerstnerVertexIntensityPID: 0
+  LuxWaterMask_GAmplitudePID: 0
+  GAmplitudePID: 0
+  LuxWaterMask_GFinalFrequencyPID: 0
+  GFinalFrequencyPID: 0
+  LuxWaterMask_GSteepnessPID: 0
+  GSteepnessPID: 0
+  LuxWaterMask_GFinalSpeedPID: 0
+  GFinalSpeedPID: 0
+  LuxWaterMask_GDirectionABPID: 0
+  GDirectionABPID: 0
+  LuxWaterMask_GDirectionCDPID: 0
+  GDirectionCDPID: 0
+  Lux_UnderWaterAmbientSkyLightPID: 0
+  Lux_UnderWaterSunColorPID: 0
+  Lux_UnderWaterSunDirPID: 0
+  Lux_EdgeLengthPID: 0
+  Lux_PhongPID: 0
+  Lux_WaterMeshScalePID: 0
+  Lux_CausticsEnabledPID: 0
+  Lux_CausticModePID: 0
+  Lux_UnderWaterFogColorPID: 0
+  Lux_UnderWaterFogDensityPID: 0
+  Lux_UnderWaterFogAbsorptionCancellationPID: 0
+  Lux_UnderWaterAbsorptionHeightPID: 0
+  Lux_UnderWaterAbsorptionMaxHeightPID: 0
+  Lux_MaxDirLightDepthPID: 0
+  Lux_MaxFogLightDepthPID: 0
+  Lux_UnderWaterDeferredFogParams: 0
+  islinear: 0
+=======
+  m_aboveWatersurface: []
+  m_belowWatersurface: []
+  enableDebug: 1
+>>>>>>> 21cc83c3207b959f66a5fe66087ce60492341745
 --- !u!114 &769419238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -734,6 +844,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WaterVolumeMesh: {fileID: 4300000, guid: 7653ffa6d9d43944b925de2901535a6f, type: 3}
+<<<<<<< HEAD
+  waterrendermanager: {fileID: 0}
+  readyToGo: 0
+=======
+>>>>>>> 21cc83c3207b959f66a5fe66087ce60492341745
 --- !u!33 &907834019
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -785,10 +900,20 @@ MonoBehaviour:
   isMaster: 0
   WaterMaterials: []
   reflectionMask:
+<<<<<<< HEAD
+    m_Bits: 4294967295
+  Resolution: 2
+  clearColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+=======
     serializedVersion: 2
     m_Bits: 4294967295
   Resolution: 2
   clearColor: {r: 0, g: 0, b: 0, a: 1}
+>>>>>>> 21cc83c3207b959f66a5fe66087ce60492341745
   reflectSkybox: 1
   disablePixelLights: 0
   renderShadows: 1
@@ -796,6 +921,14 @@ MonoBehaviour:
   ShadowCascades: 1
   WaterSurfaceOffset: 0
   clipPlaneOffset: 0.07
+<<<<<<< HEAD
+  reflectionSampler: _LuxWater_ReflectionTex
+  m_Oldpos: {x: 0, y: 0, z: 0}
+  m_ReflectionCamera: {fileID: 0}
+  m_SharedMaterial: {fileID: 0}
+  m_reflectionMap: {fileID: 0}
+=======
+>>>>>>> 21cc83c3207b959f66a5fe66087ce60492341745
 --- !u!1 &930490933
 GameObject:
   m_ObjectHideFlags: 0
@@ -1187,6 +1320,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48c522cb0c7c5d1498259e0a862109f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+  waterrendermanager: {fileID: 0}
+  readyToGo: 0
+=======
+>>>>>>> 21cc83c3207b959f66a5fe66087ce60492341745
   cam: {fileID: 0}
 --- !u!1 &1250052079
 GameObject:

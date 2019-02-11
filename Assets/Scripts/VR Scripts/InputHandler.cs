@@ -77,14 +77,14 @@ public class InputHandler : MonoBehaviour
 
     private void Walk()
     {
-        Debug.Log("Walk");
+        //Debug.Log("Walk");
         pRB.velocity = controller.transform.forward * walkVelocity * Time.deltaTime;
         return;
     }
 
     private void Run()
     {
-        Debug.Log("Run");
+        //Debug.Log("Run");
         pRB.velocity = controller.transform.forward * runVelocity * Time.deltaTime;
         return;
     }
